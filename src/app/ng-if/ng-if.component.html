@@ -1,0 +1,8 @@
+<div *ngIf="message === 'successs'" class="bg-success">This is success</div>
+<div *ngIf="message === 'info'" class="bg-info">Info</div>
+<div *ngIf="message === 'a'" class="bg-danger">danger</div>
+<div *ngIf="message === 'primary'" class="bg-primary">primary</div>
+
+<ng-template #xyz>
+  <div class="info">Nothing matched it is else block</div>
+</ng-template>
