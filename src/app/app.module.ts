@@ -17,6 +17,19 @@ import { ParentComponent } from './input-binding/input-parent/parent.component';
 import { ItemDetailsComponent } from './my-custom/items/item-details/item-details.component';
 import { ItemsComponent } from './my-custom/items/items/items.component';
 import { OutputParentComponent } from './output-binding/output-parent/parent.component';
+import { FormsModule } from '@angular/forms';
+import { NgModelDemoComponent } from './two-way-binding/built-in-ngModel/ngmodel-demo.component';
+import { TwoChildComponent } from './two-way-binding/custom-two-way/two-child.component';
+import { TwoParentComponent } from './two-way-binding/custom-two-way/two-way-parent.component';
+import { FontInccomponent } from './font-inc-dec/font-size.compoent';
+import { FontChnagecomponent } from './font-inc-dec/font-change.compoent copy';
+import { NgContentChild } from './ng-content/ng-content-child';
+import { NgContentparent } from './ng-content/ng-content-parent';
+import { NgContainerComponent } from './ng-container/ng-container.component';
+import { CardDetailComponent } from './my-custom/items/card-item.component';
+import { AddCardComponent } from './my-custom/items/items/add-card.component';
+import { HttpCallComponent } from './http-call/http-call.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,8 +49,19 @@ import { OutputParentComponent } from './output-binding/output-parent/parent.com
     OutputParentComponent,
     ItemsComponent,
     ItemDetailsComponent,
+    NgModelDemoComponent,
+    TwoParentComponent,
+    TwoChildComponent,
+    FontInccomponent,
+    FontChnagecomponent,
+    NgContentChild,
+    NgContentparent,
+    NgContainerComponent,
+    CardDetailComponent,
+    AddCardComponent,
+    HttpCallComponent
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, FormsModule , HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

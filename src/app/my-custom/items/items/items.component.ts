@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Card } from 'src/app/model/card.model';
+import { ItemService } from 'src/app/services/item.service';
 
 @Component({
   selector: 'app-items',
@@ -6,24 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./items.component.css'],
 })
 export class ItemsComponent implements OnInit {
-  items = [
-    {
-      name: 'Item1',
-      path: 'assets/images/angular.png',
-      desc: 'This is the Desc1',
-    },
-    {
-      name: 'Item2',
-      path: 'assets/images/angular.png',
-      desc: 'This is the Desc2',
-    },
-    {
-      name: 'Item3',
-      path: 'assets/images/angular.png',
-      desc: 'This is the Desc3',
-    },
-  ];
-  constructor() {}
+  items = [];
+  constructor(private service: ItemService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.items = this.service.getItems();
+  }
 }
